@@ -44,12 +44,3 @@ body {
 .display-main-text {
     text-align: center;
 }
-
-#Stage {
-    width: 500px;
-    height: 300px;
-    border: 8px solid lightgreen;
-    border-radius: 20px;
-    margin-top: 10px;
-    overflow: hidden;
-}
