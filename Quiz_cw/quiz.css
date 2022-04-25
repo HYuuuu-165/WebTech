@@ -1,0 +1,55 @@
+body {
+    color: #FFFFFF;
+}
+
+/*a display*/
+.choice-container {
+    display: flex;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 5px;
+    background: #2E86C1;
+}
+
+.choice-container:hover {
+    box-shadow: 0 0.2rem 1.2rem 0 #1F10F3;
+    transform: matrix(5);
+}
+
+.choice-prefix {
+    padding: 1px 1px;
+    color: #FFFFFF;
+}
+
+.choice-text {
+    padding: 5px;
+    width: 100%;
+}
+
+/*q display*/
+#display {
+    display: flex;
+    justify-content: space-between;
+}
+
+#question {
+    font-size: 18pt;
+}
+
+.display-prefix {
+    font-size: 20pt;
+    text-align: center;
+}
+
+.display-main-text {
+    text-align: center;
+}
+
+#Stage {
+    width: 500px;
+    height: 300px;
+    border: 8px solid lightgreen;
+    border-radius: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+}

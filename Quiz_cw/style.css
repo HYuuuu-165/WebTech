@@ -10,17 +10,17 @@
 /*general*/
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 35pt;
+    margin: 5px;
+    padding: 2px;
+    font-size: 23pt;
     font-family: 'Nova Cut', cursive;
 }
 
 /*title*/
 h1 {
-    font-size: 100pt;
+    font-size: 75pt;
     color: aqua;
-    margin-bottom: 25px;
+    margin-bottom: 2px;
 }
 
 /*welcome */
@@ -32,7 +32,7 @@ h3{
 
 /* quiz...about*/
 h4{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-family: 'Patrick Hand', cursive;
 }
 
@@ -44,13 +44,15 @@ h2{
 
 /*buttons*/
 .container{
-    width: 180px;
+    width: fit-content;
     height: 60px;
-    display: flow;
+    display: flex;
     justify-content: center;
     align-items: center;
     max-width: 50px;
-    margin: 0 auto;
+    margin-left: 300px;
+    flex-wrap: wrap;
+
 }
 
 .flex-column{
@@ -76,7 +78,12 @@ h2{
     width: 280px;
     text-align: center;
     color: #FFFFFF;
-    margin-bottom: 30px;
-    background: linear-gradient(90deg, #2E86C1 20%, #3498DB 100%);
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #2E86C1 20%, #2ECC71 100%);
     border-radius: 20px;
+}
+
+.start:hover{
+    box-shadow: 0 0.2rem 1.2rem 0 #2ECC71;
+    transform: matrix(5);
 }
