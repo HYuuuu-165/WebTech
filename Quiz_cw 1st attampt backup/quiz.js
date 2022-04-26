@@ -6,8 +6,8 @@ const MaxStage = document.querySelector('#MaxStage');
 const SCORE = 20
 const MAX_Q = 5
 
-let thisQuestion = {};
-let thisAnswer = true;
+let currentQuestion = {};
+let currentAnswer = true;
 let score = 0;
 let questionNum = 0;
 let remainQuestion = [];
@@ -70,24 +70,24 @@ getNextQ = () => {
     questionNum++
 
     const questionsIndex = Math.floor(Math.random() * remainQuestion.length);
-    thisQuestion = remainQuestion[questionsIndex];
-    questions.innerText = thisQuestion.question;
+    currentQuestion = remainQuestion[questionsIndex];
+    questions.innerText = currentQuestion.question;
 
     answers.forEach(answer => {
       const number = answer.dataset['number'];
-      answer.innerText = thisQuestion['answer' + number]
+      answer.innerText = currentQuestion['answer' + number]
     })
 
     remainQuestion.splice(questionsIndex, 1)
 
-    thisAnswer = true;
+    currentAnswer = true;
 }
 
 answers.forEach(answer => {
     answer.addEventListener('click', e => {
-        if(!thisAnswer) return;
+        if(!currentAnswer) return;
 
-        thisAnswer = false;
+        currentAnswer = false;
         const userChoice = e.target;
         let verifyAnswer = userChoice.dataset['number'];
 

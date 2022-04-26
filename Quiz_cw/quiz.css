@@ -1,0 +1,95 @@
+*{
+    background: green;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.questions{
+    background: lightblue;
+    margin: 3rem auto;
+    width: 650px;
+    padding: 25px;
+    cursor: default;
+}
+#question{
+    margin-bottom: 1rem;
+    background: lightblue;
+}
+.option{
+    margin-bottom: 0.5rem;
+    font-size: 15pt;
+    border-bottom: solid 0.1rem blue;
+    width: 300px;
+    background: deepskyblue;
+    border-radius: 10px;
+}
+.option:hover{
+    color: white;
+}
+ol{
+    position: relative;
+    padding: 0 1.5rem;
+    color: black;
+    background: lightblue;
+}
+span{
+    display: block;
+    padding: 0.1rem 0.7rem;
+    border-radius: 10px;
+}
+#answer{
+    margin-top: 20px;
+}
+#stage{
+    margin-top: 1.5rem;
+    color: mediumblue;
+    background: lightblue;
+}
+.buttons{
+    text-align: center;
+}
+button{
+    padding: 10px 35px;
+    border: none;
+    outline: none;
+    font-size: 25pt;
+    border-radius: 75px;
+    color: darkblue;
+    background: lightgreen;
+}
+button:active{
+    background: lavender;
+}
+#scoreboard,#showAnswer{
+    width: 450px;
+    background: lightblue;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top: 200px;
+    display: none;
+}
+#score-title{
+    margin: 5px;
+    background: lightblue;
+}
+#score-btn,#seeAnswer{
+    margin-top: 40px;
+}
+#score{
+    font-size: 50pt;
+    background: blue;
+    border-radius: 10px;
+}
+#showAnswer li{
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: larger;
+    background: lightblue;
+}
+#answers{
+    margin-top: 10px;
+    background: lightblue;
+}
