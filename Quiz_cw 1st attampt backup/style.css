@@ -1,0 +1,89 @@
+/*fonts from google fonts at https://fonts.google.com/*/
+@import url('https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Nova+Cut&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Germania+One&family=Nova+Cut&family=Patrick+Hand&display=swap');
+
+:root {
+    background-color: green;
+}
+
+/*general*/
+*{
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 2px;
+    font-size: 23pt;
+    font-family: 'Nova Cut', cursive;
+}
+
+/*title*/
+h1 {
+    font-size: 75pt;
+    color: aqua;
+    margin-bottom: 2px;
+}
+
+/*welcome */
+h3{
+    color: azure ;
+    margin-bottom: auto;
+    font-family: 'Patrick Hand', cursive;
+}
+
+/* quiz...about*/
+h4{
+    margin-bottom: 5px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+/*ready*/
+h2{
+    color: gold;
+    font-family: 'fantasy', bold;
+}
+
+/*buttons*/
+.container{
+    width: fit-content;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50px;
+    margin-left: 300px;
+    flex-wrap: wrap;
+
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+.text-center{
+    text-align: center;
+}
+
+.start{
+    font-family: 'Germania One', cursive;;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #2E86C1 20%, #2ECC71 100%);
+    border-radius: 20px;
+}
+
+.start:hover{
+    box-shadow: 0 0.2rem 1.2rem 0 #2ECC71;
+    transform: matrix(5);
+}
