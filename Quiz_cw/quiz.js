@@ -53,7 +53,7 @@ const questionBank = [
 ];
 
 const question = document.getElementById('question');
-const quizContainer = document.getElementById('container');
+const questionContainer = document.getElementById('container');
 const scoreboard = document.getElementById('scoreboard');
 const option0 = document.getElementById('option0');
 const option1 = document.getElementById('option1');
@@ -88,7 +88,7 @@ function scoring(e){
     else{
         document.getElementById(e.id).style.background= 'red';
     }
-    setTimeout(nextQuestion,250);
+    setTimeout(nextQuestion,350);
 }
 
 //next q
@@ -100,10 +100,12 @@ function nextQuestion(){
     }
     else{
         points.innerHTML= score+ '/'+ questionBank.length;
-        quizContainer.style.display= 'none';
+        questionContainer.style.display= 'none';
         scoreboard.style.display= 'block'
     }
 }
+
+displayQuestion();
 
 //hit next
 next.addEventListener('click',nextQuestion);
@@ -113,19 +115,3 @@ function backToQuiz(){
     location.reload();
 }
 
-//see answers
-function seeAnswer(){
-    const showAnswer = document.getElementById('answerBank');
-    const answers = document.getElementById('answers');
-    showAnswer.style.display= 'block';
-    scoreboard.style.display= 'none';
-    for(let a=0; a<questionBank.length; a++)
-    {
-        const list = document.createElement('li');
-        list.innerHTML= questionBank[a].answer;
-        answers.appendChild(list);
-    }
-}
-
-
-displayQuestion();
