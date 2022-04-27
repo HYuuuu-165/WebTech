@@ -1,5 +1,5 @@
-//Question bank
-const questionBank = [
+//Question database
+const questionDatabase = [
     {
         question: 'In which year was the \"18-hole\" game created?',
         answer: '1764',
@@ -54,13 +54,13 @@ const questionBank = [
 
 const question = document.getElementById('question');
 const questionContainer = document.getElementById('container');
-const scoreboard = document.getElementById('scoreboard');
 const option0 = document.getElementById('option0');
 const option1 = document.getElementById('option1');
 const option2 = document.getElementById('option2');
 const option3 = document.getElementById('option3');
 const next = document.querySelector('.next');
 const points = document.getElementById('score');
+const scoreboard = document.getElementById('scoreboard');
 const span = document.querySelectorAll('span');
 let i = 0;
 let score = 0;
@@ -70,47 +70,46 @@ function displayQuestion(){
     for(let a=0; a<span.length; a++){
         span[a].style.background='none';
     }
-    question.innerHTML= 'Question.'+(i+1)+' '+questionBank[i].question;
-    option0.innerHTML= questionBank[i].option[0];
-    option1.innerHTML= questionBank[i].option[1];
-    option2.innerHTML= questionBank[i].option[2];
-    option3.innerHTML= questionBank[i].option[3];
-    stage.innerHTML= "Question"+' '+(i+1)+' '+'of'+' '+questionBank.length;
+    question.innerHTML= 'Question.'+(i+1)+' '+questionDatabase[i].question;
+    option0.innerHTML= questionDatabase[i].option[0];
+    option1.innerHTML= questionDatabase[i].option[1];
+    option2.innerHTML= questionDatabase[i].option[2];
+    option3.innerHTML= questionDatabase[i].option[3];
+    stage.innerHTML= "Question"+' '+(i+1)+' '+'of'+' '+questionDatabase.length;
 }
 
 //add score
-function scoring(e){
-    if(e.innerHTML===questionBank[i].answer && score<questionBank.length)
+function scoring(mark){
+    if(mark.innerHTML===questionDatabase[i].answer && score<questionDatabase.length)
     {
         score= score+1;
-        document.getElementById(e.id).style.background= 'limegreen';
+        document.getElementById(mark.id).style.background= 'limegreen';
     }
     else{
-        document.getElementById(e.id).style.background= 'red';
+        document.getElementById(mark.id).style.background= 'red';
     }
     setTimeout(nextQuestion,350);
 }
 
 //next q
 function nextQuestion(){
-    if(i<questionBank.length-1)
+    if(i<questionDatabase.length-1)
     {
         i=i+1;
         displayQuestion();
     }
     else{
-        points.innerHTML= score+ '/'+ questionBank.length;
+        points.innerHTML= score+ '/'+ questionDatabase.length;
         questionContainer.style.display= 'none';
         scoreboard.style.display= 'block'
     }
 }
-
 displayQuestion();
 
-//hit next
+//when choose next, do
 next.addEventListener('click',nextQuestion);
 
-//back to quiz
+//when choose back to quiz, do
 function backToQuiz(){
     location.reload();
 }
