@@ -68,7 +68,7 @@ let i = 0;
 let score = 0;
 
 //show questions
-function displayQuestion(){
+function printQuestion(){
     for(let a=0; a<span.length; a++){
         span[a].style.background='none';
     }
@@ -85,7 +85,7 @@ function scoring(mark){
     if(mark.innerHTML===questionDatabase[i].answer && score<questionDatabase.length)
     {
         score= score+1;
-        document.getElementById(mark.id).style.background= 'limegreen';
+        document.getElementById(mark.id).style.background= 'green';
     }
     else{
         document.getElementById(mark.id).style.background= 'red';
@@ -98,7 +98,7 @@ function nextQuestion(){
     if(i<questionDatabase.length-1)
     {
         i=i+1;
-        displayQuestion();
+        printQuestion();
     }
     else{
         points.innerHTML= score+ '/'+ questionDatabase.length;
@@ -106,7 +106,7 @@ function nextQuestion(){
         scoreboard.style.display= 'block'
     }
 }
-displayQuestion();
+printQuestion();
 
 //when choose next, do
 next.addEventListener('click',nextQuestion);
